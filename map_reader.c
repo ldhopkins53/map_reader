@@ -49,7 +49,7 @@ int main(int argc, char **argv) {
   snprintf(proc_entry, 255, "/proc/%d/maps", pid);
 
   if (access(proc_entry, F_OK) != 0) {
-    printf("[+] %s does not exist, invalid process probably\n", proc_entry);
+    printf("[-] %s does not exist, invalid process probably\n", proc_entry);
     exit(EXIT_FAILURE);
   }
   printf("[+] Reading map entries from %s\n", proc_entry);
